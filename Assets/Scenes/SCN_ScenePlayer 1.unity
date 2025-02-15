@@ -2455,4 +2455,6 @@ MonoBehaviour:
   myRigidbody: {fileID: 2046818264}
   friction: {x: -0.1, y: 0}
   speed: 8
+  speedRun: 15
   forceJump: 12
+  _currentSpeed: 0
