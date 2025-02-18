@@ -12,6 +12,12 @@ public float speedRun;
 public float forceJump; 
 public float _currentSpeed;
 
+[Header("Animation Player")]
+public string boolRun = "Run";
+public string boolRunSpeed = "RunSpeed";
+
+public Animator animator;
+
 private void Update()
 {
 HandleJump();
@@ -20,24 +26,58 @@ HandleMoviment();
 
 private void HandleMoviment()
 {
-        if (Input.GetKey(KeyCode.LeftControl))
-        _currentSpeed = speedRun;
+
+      if (Input.GetKey(KeyCode.LeftControl))
+       _currentSpeed = speedRun;
         else
-        _currentSpeed = speed;
-            
+       _currentSpeed = speed;
+
+//======================================================       
+
+        if (Input.GetKey(KeyCode.LeftControl))
+           {
+            animator.SetBool(boolRunSpeed, true);
+           }
+
+        else if (Input.GetKey(KeyCode.LeftControl))  
+
+        {
+            animator.SetBool(boolRunSpeed, true);
+        } 
+
+        else
+        {
+             animator.SetBool(boolRunSpeed, false);
+        }    
+   
+//=========================================================================================
+
          if (Input.GetKey(KeyCode.LeftArrow))
          {
                myRigidbody.velocity = new Vector2(-_currentSpeed, myRigidbody.velocity.y);
+               myRigidbody.transform.localScale = new Vector3(-1,1,1);
+               animator.SetBool(boolRun, true);
          }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
               myRigidbody.velocity = new Vector2(_currentSpeed, myRigidbody.velocity.y);
+               myRigidbody.transform.localScale = new Vector3(1,1,1);
+              animator.SetBool(boolRun, true);
         }
+
+        else
+        {
+             animator.SetBool(boolRun, false);
+        }
+
+//=============================================================================================
+
+
 
         if (myRigidbody.velocity.x > 0)
         {
              myRigidbody.velocity += friction;
-        }
+        }                                                
 
 
         else if (myRigidbody.velocity.x < 0)
@@ -56,4 +96,3 @@ private void HandleJump()
 }
 
 }
-
