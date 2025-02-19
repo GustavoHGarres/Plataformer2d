@@ -39,19 +39,13 @@ private void HandleMoviment()
         else
        _currentSpeed = speed;
 
-//======================================================       
+//==========================================================================================       
 
         if (Input.GetKey(KeyCode.LeftControl))
            {
             animator.SetBool(boolRunSpeed, true);
            }
-
-       // else if (Input.GetKey(KeyCode.LeftControl))  
-
-       // {
-           // animator.SetBool(boolRunSpeed, true);
-       // } 
-
+       
         else
         {
              animator.SetBool(boolRunSpeed, false);
