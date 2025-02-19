@@ -1116,8 +1116,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958943743}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.8078, y: -9.623047, z: -2728}
-  m_LocalScale: {x: 250.1734, y: 0.82, z: 1}
+  m_LocalPosition: {x: -27.4267, y: -9.4104, z: -2728}
+  m_LocalScale: {x: 293.40335, y: 1.245252, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1421637757}
@@ -2454,13 +2454,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 2046818264}
-  friction: {x: -0.3, y: 0}
+  friction: {x: -0.1, y: 0}
   speed: 12
   speedRun: 30
   forceJump: 20
   _currentSpeed: 0
   boolRun: Run
   boolRunSpeed: RunSpeed
+  boolAttack: Attack
+  boolKick: Kick
+  boolJump: Jump
   animator: {fileID: 2046818269}
 --- !u!95 &2046818269
 Animator:
