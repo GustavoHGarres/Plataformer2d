@@ -17,8 +17,8 @@ public string boolRun = "Run";
 public string boolRunSpeed = "RunSpeed";
 public string boolAttack = "Attack";
 public string boolKick = "Kick";
-
 public string boolJump = "Jump";
+public string boolSpecial = "Special";
 
 public Animator animator;
 
@@ -29,6 +29,7 @@ HandleBoolJump();
 HandleMoviment();
 HandleAttack();
 HandleKick();
+HandleSpecial();
 }
 
 private void HandleMoviment()
@@ -133,6 +134,19 @@ private void HandleKick()
       else
         {
              animator.SetBool(boolKick, false);
+        }   
+}
+
+private void HandleSpecial()
+{
+      if (Input.GetKeyDown(KeyCode.D))
+           {
+            animator.SetBool(boolSpecial, true);
+           }
+ 
+      else
+        {
+             animator.SetBool(boolSpecial, false);
         }   
 }
 
