@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 9206801361010531643}
   - component: {fileID: 9206801361010531590}
   - component: {fileID: 9206801361010531591}
-  - component: {fileID: 9206801361010531640}
+  - component: {fileID: 9094232833722995127}
   m_Layer: 0
   m_Name: PFB_Star
   m_TagString: Untagged
@@ -156,7 +156,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.402191, y: 4.840126}
   m_EdgeRadius: 0
---- !u!114 &9206801361010531640
+--- !u!114 &9094232833722995127
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9206801361010531642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cb90eba16a77f64ea1e9a3bfb0f458e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c9ea5d28886c124abd2286e873b0b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   comparetag: Player

@@ -28,10 +28,19 @@ public class ItemManager : MonoBehaviour
     {
         coins = 0;
     }
-
+    
+    // Soma as moedas na UI texto
     public void AddCoins(int amount = 1)
     {
         CollectCoins.coins += amount;
         CollectCoins.coinsText.text = CollectCoins.coins.ToString();
+        
+    }
+
+   // Adiciona o valor na interface do script ItemManager
+    public void AddCoinsSum(int amount = 1)
+    {
+        coins += amount;
+               
     }
 }
