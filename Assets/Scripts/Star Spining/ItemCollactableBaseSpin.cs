@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemCollactableBase : MonoBehaviour
+public class ItemCollactableBaseSpin : MonoBehaviour
 {
-    public string comparetag = "Player";
+    public string comparetag = "Player1";
         
         private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -26,4 +26,3 @@ public class ItemCollactableBase : MonoBehaviour
     }
   
 }
-
