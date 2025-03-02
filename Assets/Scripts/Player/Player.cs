@@ -7,10 +7,14 @@ public class Player : MonoBehaviour
 
 public Rigidbody2D myRigidbody;
 public Vector2 friction = new Vector2(.1f, 0);
-public float speed;
-public float speedRun;
-public float forceJump; 
-public float _currentSpeed;
+//public float speed;
+//public float speedRun;
+//public float forceJump; 
+private float _currentSpeed;
+
+public SOFloat sospeed;
+public SOFloat sospeedRun;
+public SOFloat soforceJump;
 
 [Header("Animation Player")]
 public string boolRun = "Run";
@@ -36,9 +40,9 @@ private void HandleMoviment()
 {
 
       if (Input.GetKey(KeyCode.LeftControl))
-       _currentSpeed = speedRun;
+       _currentSpeed = sospeedRun.value;
         else
-       _currentSpeed = speed;
+       _currentSpeed = sospeed.value;
 
 //==========================================================================================       
 
@@ -92,7 +96,7 @@ private void HandleJump()
 {
      if (Input.GetKeyDown(KeyCode.Space))
      {
-      myRigidbody.velocity = Vector2.up * forceJump;
+      myRigidbody.velocity = Vector2.up * soforceJump.value;
      }
 
 }
