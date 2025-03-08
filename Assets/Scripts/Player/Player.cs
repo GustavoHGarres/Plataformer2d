@@ -26,6 +26,10 @@ public string boolSpecial = "Special";
 
 public Animator animator;
 
+[Header("Particles")]
+
+public ParticleSystem particleDust;
+
 private void Update()
 {
 HandleJump();
@@ -97,6 +101,7 @@ private void HandleJump()
      if (Input.GetKeyDown(KeyCode.Space))
      {
       myRigidbody.velocity = Vector2.up * soforceJump.value;
+      ParticlesDust();
      }
 
 }
@@ -153,5 +158,10 @@ private void HandleSpecial()
              animator.SetBool(boolSpecial, false);
         }   
 }
+
+private void ParticlesDust()
+    {
+        if(particleDust != null) particleDust.Play();
+    }
 
 }
