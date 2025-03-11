@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemCollactableBaseSpin : MonoBehaviour
 {
     public string comparetag = "Player1";
+   
         
         private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,7 +23,7 @@ public class ItemCollactableBaseSpin : MonoBehaviour
 
     protected virtual void OnCollect()
     {
-
+      
     }
   
 }

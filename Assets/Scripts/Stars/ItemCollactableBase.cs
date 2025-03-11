@@ -8,6 +8,7 @@ public class ItemCollactableBase : MonoBehaviour
 {
     public string comparetag = "Player";
     public ParticleSystem particleSystem;
+    public AudioSource audioSource;
 
     public void Awake()
     {
@@ -31,6 +32,7 @@ public class ItemCollactableBase : MonoBehaviour
     protected virtual void OnCollect()
     {
         if(particleSystem != null) particleSystem.Play();
+        if (audioSource != null) audioSource.Play();
     }
   
 }

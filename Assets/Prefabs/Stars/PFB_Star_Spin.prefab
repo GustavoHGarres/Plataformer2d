@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparetag: Player1
+  audioSourceSpin: {fileID: 0}
 --- !u!212 &5234527600812329238
 SpriteRenderer:
   m_ObjectHideFlags: 0

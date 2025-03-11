@@ -28,7 +28,13 @@ public Animator animator;
 
 [Header("Particles")]
 
-public ParticleSystem particleDust;
+public ParticleSystem particleDustRun;
+public ParticleSystem particleDustJump;
+
+
+[Header("Sounds")]
+
+public AudioSource audioSourceJump;
 
 private void Update()
 {
@@ -38,6 +44,7 @@ HandleMoviment();
 HandleAttack();
 HandleKick();
 HandleSpecial();
+
 }
 
 private void HandleMoviment()
@@ -47,6 +54,7 @@ private void HandleMoviment()
        _currentSpeed = sospeedRun.value;
         else
        _currentSpeed = sospeed.value;
+    
 
 //==========================================================================================       
 
@@ -67,12 +75,14 @@ private void HandleMoviment()
                myRigidbody.velocity = new Vector2(-_currentSpeed, myRigidbody.velocity.y);
                myRigidbody.transform.localScale = new Vector3(-1,1,1);
                animator.SetBool(boolRun, true);
+               ParticlesDustRun();
          }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
               myRigidbody.velocity = new Vector2(_currentSpeed, myRigidbody.velocity.y);
-               myRigidbody.transform.localScale = new Vector3(1,1,1);
+              myRigidbody.transform.localScale = new Vector3(1,1,1);
               animator.SetBool(boolRun, true);
+              ParticlesDustRun();
         }
 
         else
@@ -102,6 +112,7 @@ private void HandleJump()
      {
       myRigidbody.velocity = Vector2.up * soforceJump.value;
       ParticlesDust();
+      AudioSourceJump();
      }
 
 }
@@ -159,9 +170,20 @@ private void HandleSpecial()
         }   
 }
 
-private void ParticlesDust()
+    private void ParticlesDust()
     {
-        if(particleDust != null) particleDust.Play();
+        if(particleDustJump != null) particleDustJump.Play();
     }
+
+    private void AudioSourceJump()
+    {
+        if (audioSourceJump != null) audioSourceJump.Play();
+    }
+
+    private void ParticlesDustRun()
+    {
+        if (particleDustRun != null) particleDustRun.Play();
+    }
+    
 
 }
