@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SCN_Menu.unity
+    path: Assets/Scenes/SCN_Menu_Initial.unity
     guid: fc3d853b4e9ad874ea9ad3819475b868
   - enabled: 1
     path: Assets/Scenes/SCN_Level1.unity
@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SCN_Art.unity
     guid: e7de4d0c773ef144eb0e886dfebf0c6d
+  - enabled: 1
+    path: Assets/Scenes/SCN_ScenePlayer 5.unity
+    guid: d0effafc3f099f946a66345a4beffd58
+  - enabled: 1
+    path: Assets/Scenes/SCN_Menu_Settings.unity
+    guid: 6179d186a4369ff4f94b9edfda713e6c
   m_configObjects: {}
